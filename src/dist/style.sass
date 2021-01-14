@@ -1,0 +1,532 @@
+@mixin Dancing()
+    font-family: 'Dancing Script', cursive;
+@mixin Poppins()
+    font-family: 'Poppins', sans-serif;
+@mixin Neue()
+    font-family: 'Bebas Neue', cursive;
+@mixin Playfair()
+    font-family: 'Playfair Display', serif;
+@mixin Magic()
+    font-family: 'Yusei Magic', sans-serif;
+@mixin Anton()
+    font-family: 'Anton', sans-serif;
+@mixin Montserrat()
+    font-family: 'Montserrat', sans-serif;
+@mixin Moda()
+    font-family: 'Bodoni Moda', serif;
+    
+body
+    overflow-x: hidden
+
+// NAVIGASI----------------------------
+nav
+    button.navbar-toggler
+            border: 0 !important
+    a
+        &.navbar-brand
+            @include Dancing()
+            font-size: 30px
+        &.nav-link
+            @include Poppins()
+            font-size: 14px
+            padding: 20px !important
+            // &::after
+            //     content: ""
+            //     width: 30px
+            //     height: 3px
+            //     background-color: #198754
+            //     display: none
+            //     margin: auto
+            // &.active::after
+            //     display: block
+            // &:hover::after
+            //     display: block !important
+
+
+// SLIDER----------------------------
+// .carousel
+//     position: relative
+//     &::after
+//         content: ""
+//         display: block
+//         position: absolute
+//         top: 0
+//         bottom: 0
+//         left: 0
+//         right: 0
+//         background-color: rgba(0, 0, 0,0.5 )
+//     .carousel-item
+//         img
+//             max-height: 700px
+//         .carousel-caption
+//             z-index: 10
+
+    
+// HEADER----------------------------
+header
+    position: relative
+    max-height: 700px
+    width: 100%
+    background-size: cover
+    border-bottom: 5px solid #333
+    &::after
+        content: ""
+        display: block
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        background-color: rgba(0, 0, 0,0.5 )
+    img
+        width: 100%
+        max-height: 700px
+        z-index: 1
+    .text
+        position: absolute
+        top: 50%
+        left: 100px
+        color: white
+        z-index: 10
+        transform: translateY(-50%)
+        h1
+            @include Neue()
+            font-size: 60px
+            letter-spacing: 3px
+            font-weight: bold
+            line-height: 30px
+            margin-bottom: 50px
+            &::after
+                content: "Ya Disini Tempatnya!"
+                @include Playfair()
+                font-size: 30px
+                text-align: right
+                display: block
+                letter-spacing: 1px
+                margin-top: 10px
+        p
+            @include Poppins()
+            font-size: 16px
+            width: 300px
+    h5
+        position: absolute
+        bottom: 50px
+        z-index: 10
+        color: #cfcccc
+        @include Magic()
+        left: 200px
+
+#parallax_container
+        height: 700px;
+        position: relative;
+        z-index: 1;
+        #parallax
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+// Main----------------------------
+main
+    border-bottom: 5px solid #333
+    color: white
+    .img
+        min-height: 200px
+    h3
+        font-weight: 600
+        letter-spacing: 3px
+        &::after
+            content: ""
+            display: block
+            width: 80px
+            height: 2px
+            margin-left: 20px 
+            margin-top: 5px
+            background-color: #da1e37
+    h3.green
+        &::after
+            background-color:#2a9d8f
+    h3.dark
+        &::after
+            background-color:#36474f
+    h3.light
+        &::after
+            background-color:#797572
+    .row
+        .col-lg-6.img
+            overflow-x: hidden
+            background-size: cover
+    // img
+    //     width: 100%
+    //     height: 100%
+    .row:nth-child(1)
+        .col-md-6
+            &:nth-child(1)
+                .text
+                    padding-left: 30px
+                    background-color: #2a9d8f //2a9d8f 71b48d 6dd6ad
+                    position: relative
+                    .desk
+                        &::after
+                            content: ""
+                            display: block
+                            width: 20px
+                            height: 20px
+                            position: absolute
+                            transform: rotate(-45deg)
+                            background-color: #2a9d8f
+                            right: -10px
+                            top: 20px
+            &:nth-child(2)
+                .text
+                    background-color: #36474f
+                    position: relative
+                    .desk
+                        &::after
+                            content: ""
+                            display: block
+                            width: 20px
+                            height: 20px
+                            position: absolute
+                            transform: rotate(-45deg)
+                            background-color: #36474f
+                            right: -10px
+                            bottom: 50px
+    .row:nth-child(2)
+        .col-md-6
+            &:nth-child(1)
+                .text
+                    background-color: #797572
+                    position: relative
+                    .desk
+                        &::after
+                            content: ""
+                            display: block
+                            width: 20px
+                            height: 20px
+                            position: absolute
+                            transform: rotate(-45deg)
+                            background-color: #797572
+                            left: -10px
+                            top: 15px
+            &:nth-child(2)
+                .text
+                    background-color: #da1e37 //da1e37 ef233c
+                    position: relative
+                    .desk
+                        &::after
+                            content: ""
+                            display: block
+                            width: 20px
+                            height: 20px
+                            position: absolute
+                            transform: rotate(-45deg)
+                            background-color: #da1e37
+                            left: -10px
+                            bottom: 20px
+    .row.product
+        min-height: 250px
+
+a.cta
+    position: relative
+    margin: auto
+    transition: all .2s ease
+    margin-left: 100px
+    &:before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        display: block
+        border-radius: 28px
+        background: #da1e37
+        width: 16px
+        height: 16px
+        transition: all .3s ease
+    span
+        @include Poppins()
+        
+        position: relative
+        font-size: 12px
+        line-height: 18px
+        font-weight: 500
+        letter-spacing: .25em
+        text-transform: uppercase
+        vertical-align: middle
+        color: white
+    &:hover
+        &:before
+            width: 100%
+            background: #da1e37
+    &:active
+        transform: scale(.96)
+a.cta.red
+    &:before
+        background: #19cfba
+    &:hover
+        &:before
+            width: 100%
+            background: #19cfba
+a.cta.dark
+    &:before
+        background: #36474f
+    &:hover
+        &:before
+            width: 100%
+            background: #36474f
+a.cta.light
+    &:before
+        background: #797572
+    &:hover
+        &:before
+            width: 100%
+            background:  #797572
+
+
+// .box
+//     width: 90%
+//     height: 500px
+//     background-image: url("https://galuhid.000webhostapp.com/wp-content/uploads/2021/01/Percetakan-1.jpg")
+//     margin: 50px auto;
+//     background-size: cover
+        
+        
+// OWNER----------------------------
+.owner
+    border-bottom: 5px solid #111
+    color: white
+    @include Poppins()
+    hr
+        width: 20px
+        margin-bottom: 20px
+        opacity: 1
+    h4
+        letter-spacing: 3px
+        position: relative
+        margin-bottom: 20px !important
+    .photo
+        background-size: cover
+        background-repeat: no-repeat
+        // background-position-y: -300px
+        background-position-y: -60px
+        min-height: 500px
+    .text
+        // background-image: url("https://images.unsplash.com/photo-1514880448122-7e417213b996?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80")
+        // background-position-y: -300px
+        // position: relative
+        // z-index: 2
+        // &::after
+        //     content: ""
+        //     display: block
+        //     position: absolute
+        //     top: 0
+        //     bottom: 0
+        //     left: 0
+        //     right: 0
+        //     background-color: rgba(0, 0, 0, 0.8)
+        //     z-index: 1
+        background-color: #073b4c
+        position: relative
+        font-size: 15px
+        p
+            line-height: 1.8em
+        &::after
+            content: ""
+            display: block
+            width: 50px
+            height: 30px
+            background-color: #073b4c
+            position: absolute
+            top: 20px
+            left: -15px
+            transform: rotate(-45deg)
+        .textIn
+            z-index: 2
+            position: relative
+            @include Montserrat()
+            font-size: 14px
+            h4
+                margin-bottom: 20px !important
+                &::after
+                    content: ""
+                    display: block
+                    width: 100px
+                    margin-top: 5px
+                    height: 2px
+                    background-color: white
+    .visi
+        background-color:#da1e37
+        z-index: 2
+        position: relative
+        font-size: 14px
+        hr
+            border-bottom: 2px solid #2a9d8f
+            color: #2a9d8f
+        h4
+            // &::after
+            //     content: ""
+            //     display: block
+            //     width: 20px
+            //     height: 20px
+            //     position: absolute
+            //     top: 0
+            //     left: -5px
+            //     background-color: #2a9d8f
+            //     border-radius: 50%
+            //     z-index: -1
+        &::after
+            content: ""
+            display: block
+            position: absolute
+            width: 100%
+            height: 20px
+            background-color: #da1e37
+            bottom: -20px
+            right: -20px
+    .misi
+        background-color:#2a9d8f
+        z-index: 2
+        position: relative
+        font-size: 14px
+        hr
+            border-bottom: 2px solid #da1e37
+            color: #da1e37
+        h4
+            // &::after
+            //     content: ""
+            //     display: block
+            //     width: 20px
+            //     height: 20px
+            //     background-color: #da1e37
+            //     position: absolute
+            //     border-radius: 50%
+            //     z-index: -1
+            //     left: -5px
+            //     top: 0
+        &::after
+            content: ""
+            display: block
+            position: absolute
+            width: 100%
+            height: 20px
+            background-color: #2a9d8f
+            top: -20px
+            right: -20px
+
+// Gallery----------------------------
+.gallery
+    .demo
+        a
+            cursor: zoom-in
+            &::after
+                content: ""
+                display: none
+                position: absolute
+                top: 0
+                bottom: 0
+                left: 0
+                right: 0
+                background-color: rgba(0, 0, 0, 0.5)
+            &:hover::after
+                display: block
+            
+// Footer----------------------------
+
+footer
+    padding: 30px 20px 150px 20px !important
+    text-align: left !important
+    background-color: #21252c
+    color: #f0efef
+    position: relative
+    @include Poppins()
+    hr
+        margin-bottom: 20px
+        height: 5px
+        width: 50px
+        color:  #2a9d8f
+        border-bottom: 3px solid #da1e37
+        opacity: 1
+    .footer
+        background-color: #1c2129
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        padding: 10px
+        margin-top: 50px
+        p
+            margin-bottom: 0
+            padding: 20px
+    h4
+        @include Moda()
+        letter-spacing: 2px
+    p
+        color: #cac7c7
+        font-size: 13px
+    .left
+        h4.logo
+            @include Dancing()
+            font-size: 30px
+            letter-spacing: 0
+            margin-bottom: 20px
+        .sosmed
+            margin-top: 100px
+            a
+                color: white
+                .fab, .fas
+                    padding: 20px
+                .fa-facebook-f
+                    background-color: #3b5998
+                .fa-twitter
+                    background-color:  #00acee 
+                .fa-youtube
+                    background-color:  #c4302b
+                .fa-instagram
+                    background: #d6249f;
+                    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+                .fa-envelope
+                    background-color: #C71610
+
+    .mid
+        h4
+            position: relative
+            z-index: 2
+            margin-bottom: 5px
+            &::after
+                content: ""
+                display: block
+                background-color: #da1e37
+                position: absolute
+                width: 20px
+                height: 20px
+                top: 0
+                z-index: -1
+                border-radius: 50%
+        ul
+            li
+                span
+                    color: #cac7c7
+
+    .right
+        hr  
+            color:  #da1e37
+            border-top: 3px solid #2a9d8f
+            border-bottom: none
+        h4
+            position: relative
+            z-index: 2
+            margin-bottom: 5px
+            &::after
+                content: ""
+                display: block
+                background-color: #2a9d8f
+                position: absolute
+                width: 20px
+                height: 20px
+                top: 0
+                z-index: -1
+                border-radius: 50%
+        iframe
+            width: 100%
+            height: 250px
