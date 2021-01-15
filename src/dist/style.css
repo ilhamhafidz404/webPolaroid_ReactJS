@@ -526,6 +526,7 @@ footer .mid h4::after {
 
 footer .mid ul li span {
   color: #cac7c7;
+  font-weight: bold;
 }
 
 footer .right hr {
